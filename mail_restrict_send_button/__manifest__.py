@@ -12,6 +12,6 @@
     "installable": True,
     "maintainer": ["dreispt"],
     "development_status": "Alpha",
-    "data": ["security/res_groups.xml", "views/assets.xml"],
+    "data": ["security/res_groups.xml"],
     "qweb": ["static/src/xml/chatter.xml"],
 }
