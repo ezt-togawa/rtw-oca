@@ -1,0 +1,8 @@
+<odoo>
+  <data>
+       <record id="group_change_vendor_purchase" model="res.groups">
+            <field name="name">Change Partner In Purchase Order</field>
+            <field name="category_id" ref="base.module_category_usability"/>
+       </record>
+  </data>
+</odoo>
