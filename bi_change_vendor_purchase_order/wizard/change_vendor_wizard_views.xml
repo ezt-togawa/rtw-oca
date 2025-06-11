@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_change_vendor_form" model="ir.ui.view">
+        <field name="name">view.change.vendor.form</field>
+        <field name="model">change.vendor.wizard</field>
+        <field name="arch" type="xml">
+          <form string="Change Vendor">
+              <sheet>
+                  <group>
+                      <field name="purchase_id"/>
+                  </group>
+                  <footer>
+                          <button name="confirm_button" string="Confirm" type="object" class="btn-primary"/>
+                          <button string="Cancel" class="btn-secondary" special="cancel"/>
+                  </footer>
+              </sheet>
+          </form>
+        </field>
+    </record>
+  </data>
+</odoo>
