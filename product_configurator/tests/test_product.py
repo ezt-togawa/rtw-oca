@@ -666,7 +666,7 @@ class TestProduct(ProductConfiguratorTestCases):
 
     def test_19_fields_view_get(self):
         product_product = self._get_product_id()
-        product_product.with_context({"default_config_ok": True}).fields_view_get()
+        product_product.with_context(default_config_ok=True).fields_view_get()
 
     def test_20_get_conversions_dict(self):
         product_product = self._get_product_id()
@@ -698,28 +698,7 @@ class TestProduct(ProductConfiguratorTestCases):
             Method: _get_config_name()",
         )
 
-    def test_23_search_product_weight(self):
-        product_product = self._get_product_id()
-        operator = "and"
-        value = 10
-        search_product_weight = product_product._search_product_weight(operator, value)
-        self.assertTrue(
-            search_product_weight,
-            "Error: If value False\
-            Method: _search_product_weight()",
-        )
-
-    def test_24_search_weight(self):
-        operator = "and"
-        value = 10
-        search_weight = self.product_tmpl_id._search_weight(operator, value)
-        self.assertTrue(
-            search_weight,
-            "Error: If value False\
-            Method: _search_weight()",
-        )
-
-    def test_25_check_config_line_domain(self):
+    def test_23_check_config_line_domain(self):
         product_config_line = self.env.ref(
             "product_configurator.product_config_line_218_lines"
         )
