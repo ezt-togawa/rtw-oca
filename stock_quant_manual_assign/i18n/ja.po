@@ -153,7 +153,7 @@ msgstr ""
 #: code:addons/stock_quant_manual_assign/wizard/assign_manual_quants.py:0
 #, python-format
 msgid "Quantity is higher than the needed one"
-msgstr ""
+msgstr "消費数量が要求数量を超えています。"
 
 #. module: stock_quant_manual_assign
 #: model:ir.model.fields,field_description:stock_quant_manual_assign.field_assign_manual_quants__quants_lines
@@ -189,7 +189,7 @@ msgid ""
 "Selected line quantity is higher than the available one. Maybe an operation "
 "with this product has been done meanwhile or you have manually increased the "
 "suggested value."
-msgstr ""
+msgstr "選択された行の消費数量が要求数量を超えています。要求数以内の数量を指定してください。"
 
 #. module: stock_quant_manual_assign
 #: model:ir.model.fields,help:stock_quant_manual_assign.field_assign_manual_quants_lines__package_id

@@ -838,7 +838,7 @@ class ProductConfigurator(models.TransientModel):
 
             custom_vals = self.custom_value_ids.filtered(
                 lambda x: x.attribute_id.id == attr_id
-            ).with_context({"show_attribute": False})
+            ).with_context(show_attribute=False)
             vals = attr_line.value_ids.filtered(
                 lambda v: v in self.value_ids
             ).with_context(
@@ -887,12 +887,6 @@ class ProductConfigurator(models.TransientModel):
         vals = self._remove_dynamic_fields(vals)
 
         return super(ProductConfigurator, self).write(vals)
-
-    def unlink(self):
-        """Remove parent configuration session along with wizard"""
-
-        self.mapped("config_session_id").unlink()
-        return super(ProductConfigurator, self).unlink()
 
     def action_next_step(self):
         """Proceeds to the next step of the configuration process. This usually
